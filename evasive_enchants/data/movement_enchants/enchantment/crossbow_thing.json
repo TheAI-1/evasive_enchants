@@ -1,0 +1,45 @@
+{
+  "description": "Hellfire",
+  "exclusive_set": [
+    "minecraft:multishot",
+    "minecraft:quick_charge"
+  ],
+  "supported_items": [
+    "minecraft:crossbow",
+    "minecraft:bow"
+  ],
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [],
+  "effects": {
+    "minecraft:crossbow_charge_time": {
+      "type": "minecraft:add",
+      "value": 1
+    },
+    "minecraft:projectile_count": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": 100
+        }
+      }
+    ],
+    "minecraft:projectile_spread": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": 180
+        }
+      }
+    ]
+  }
+}
