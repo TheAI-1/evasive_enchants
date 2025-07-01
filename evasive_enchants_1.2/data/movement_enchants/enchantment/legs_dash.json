@@ -1,0 +1,64 @@
+{
+  "description": "Dash",
+  "exclusive_set": [
+    "minecraft:swift_sneak"
+  ],
+  "supported_items": [
+    "minecraft:netherite_leggings",
+    "minecraft:diamond_leggings",
+    "minecraft:iron_leggings",
+    "minecraft:golden_leggings",
+    "minecraft:leather_leggings",
+    "minecraft:chainmail_leggings"
+  ],
+  "primary_items": [
+    "minecraft:netherite_leggings",
+    "minecraft:diamond_leggings",
+    "minecraft:iron_leggings",
+    "minecraft:golden_leggings",
+    "minecraft:leather_leggings",
+    "minecraft:chainmail_leggings"
+  ],
+  "weight": 3,
+  "max_level": 3,
+  "min_cost": {
+    "base": 3,
+    "per_level_above_first": 5
+  },
+  "max_cost": {
+    "base": 15,
+    "per_level_above_first": 5
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "legs"
+  ],
+  "effects": {
+    "minecraft:tick": [
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "minecraft:player",
+                "input": {
+                  "forward": true,
+                  "sneak": true
+                }
+              },
+              "flags": {
+                "is_on_ground": false
+              }
+            }
+          }
+        ],
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "movement_enchants:dash"
+        }
+      }
+    ]
+  }
+}
