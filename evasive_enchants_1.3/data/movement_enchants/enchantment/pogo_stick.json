@@ -1,0 +1,35 @@
+{
+    "description": "Pogo Stick",
+    "supported_items": "#minecraft:hoes",
+    "primary_items": "#minecraft:hoes",
+    "weight": 3,
+    "max_level": 1,
+    "min_cost": {
+      "base": 5,
+      "per_level_above_first": 0
+    },
+    "max_cost": {
+      "base": 15,
+      "per_level_above_first": 0
+    },
+    "anvil_cost": 0,
+    "slots": [
+      "mainhand"
+    ],
+    "effects": {
+      "minecraft:hit_block": [
+        {
+          "effect": {
+            "type": "minecraft:run_function",
+            "function": "movement_enchants:pogolaunch"
+          }
+        },
+        {
+          "effect": {
+            "type": "minecraft:change_item_damage",
+            "amount": 1
+          }
+        }
+      ]
+    }
+  }
